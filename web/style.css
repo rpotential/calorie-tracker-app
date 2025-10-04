@@ -1,0 +1,18 @@
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+body{margin:0;padding:24px;background:#f7fafc;color:#0f172a}
+.container{max-width:900px;margin:0 auto}
+h1{margin:0 0 16px}
+.entry-form,.entries,.controls,.summary{background:#fff;padding:16px;border-radius:8px;margin-bottom:12px;box-shadow:0 1px 2px rgba(2,6,23,0.06)}
+.row{display:flex;flex-direction:column;margin-bottom:8px}
+.row.small{flex-direction:row;gap:8px;align-items:center}
+.row label{font-size:13px;color:#334155;margin-bottom:4px}
+.row input,.row select{padding:8px;border:1px solid #e2e8f0;border-radius:6px}
+.actions{display:flex;gap:8px}
+button{padding:8px 12px;background:#0ea5a4;border:none;color:white;border-radius:6px;cursor:pointer}
+button#clearBtn,button#resetFilterBtn{background:#64748b}
+ul#entriesList{list-style:none;padding:0;margin:0}
+ul#entriesList li{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed #e6eef6}
+.entry-meta{color:#334155;font-size:13px}
+.entry-actions button{background:transparent;color:#0ea5a4;border:1px solid #0ea5a4;padding:6px 8px;border-radius:6px;margin-left:6px}
+#totals{font-weight:600;font-size:18px;margin-bottom:8px}
+canvas{width:100%;height:auto;border-radius:6px;background:#fff;padding:8px}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calorie Tracker</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Calorie Tracker</h1>
+
+    <section class="entry-form">
+      <h2>Add Entry</h2>
+      <form id="entryForm">
+        <div class="row">
+          <label for="name">Food</label>
+          <input id="name" name="name" required />
+        </div>
+        <div class="row small">
+          <label for="calories">Calories</label>
+          <input id="calories" name="calories" type="number" min="0" required />
+          <label for="meal">Meal</label>
+          <select id="meal" name="meal">
+            <option>Breakfast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+            <option>Snack</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="date">Date</label>
+          <input id="date" name="date" type="date" required />
+        </div>
+        <div class="actions">
+          <button type="submit">Add</button>
+          <button type="button" id="clearBtn">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="controls">
+      <h2>Filters</h2>
+      <div class="row small">
+        <label for="filterDate">Date</label>
+        <input id="filterDate" type="date" />
+        <button id="filterBtn">Filter</button>
+        <button id="resetFilterBtn">Reset</button>
+      </div>
+    </section>
+
+    <section class="entries">
+      <h2>Entries</h2>
+      <ul id="entriesList"></ul>
+    </section>
+
+    <section class="summary">
+      <h2>Summary</h2>
+      <div id="totals">Total: 0 kcal</div>
+      <canvas id="weekChart" width="600" height="150"></canvas>
+    </section>
+
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
