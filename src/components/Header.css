@@ -1,0 +1,261 @@
+.header {
+  background: var(--gradient-card);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-soft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid var(--primary-pink);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Beautiful Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sparkle {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  color: var(--primary-pink);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 1.8rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  font-size: 0.9rem;
+  color: var(--rose-gold);
+  font-weight: 400;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Desktop Navigation */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-small);
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+.nav-link:hover {
+  background: rgba(255, 105, 180, 0.1);
+  border-color: var(--soft-pink);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-soft);
+}
+
+.nav-link.active:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.nav-emoji {
+  font-size: 1.2rem;
+}
+
+.nav-icon {
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+.nav-label {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.nav-heart {
+  color: var(--peach);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: var(--gradient-card);
+  border: 2px solid var(--soft-pink);
+  border-radius: var(--border-radius-small);
+  padding: 0.5rem;
+  color: var(--primary-pink);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  background: var(--soft-pink);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Mobile Navigation */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--gradient-card);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.nav-link-mobile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--border-radius-small);
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nav-link-mobile:hover {
+  background: rgba(255, 105, 180, 0.1);
+  border-color: var(--soft-pink);
+}
+
+.nav-link-mobile.active {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 1rem;
+  }
+  
+  .logo-title {
+    font-size: 1.5rem;
+  }
+  
+  .logo-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .nav-desktop {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .nav-mobile {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    gap: 1rem;
+  }
+  
+  .logo {
+    gap: 0.5rem;
+  }
+  
+  .logo-title {
+    font-size: 1.3rem;
+  }
+  
+  .logo-subtitle {
+    display: none;
+  }
+  
+  .nav-link-mobile {
+    padding: 0.75rem;
+  }
+}
+
+/* Additional Animations */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.nav-link.active .nav-heart {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+/* Beautiful hover effects */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  border-radius: var(--border-radius-small);
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.nav-link:hover::before {
+  opacity: 0.1;
+}
