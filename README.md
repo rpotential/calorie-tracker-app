@@ -1,41 +1,25 @@
-# Calorie Tracker App
+# Calorie Tracker (Web)
 
-A comprehensive calorie tracking application to help users monitor their daily food intake and maintain a healthy lifestyle.
+This is a tiny client-side calorie tracker.
 
-## Features
+How to run
 
-- Track daily calorie consumption
-- Food database with nutritional information
-- Meal planning and logging
-- Progress tracking and analytics
-- User-friendly interface
+- Open `web/index.html` in your browser.
+- Or serve the `web/` folder with a simple static server (Python):
 
-## Project Structure
-
-```
-calorie-tracker-app/
-├── src/           # Source code
-├── tests/         # Test files
-├── docs/          # Documentation
-├── assets/        # Static assets (images, icons, etc.)
-├── README.md      # Project documentation
-└── .gitignore     # Git ignore patterns
+```bash
+# Python 3
+python3 -m http.server --directory web 8000
+# Then open http://localhost:8000
 ```
 
-## Getting Started
+Features
 
-1. Clone the repository
-2. Install dependencies
-3. Run the application
+- Add, edit, delete entries (food, calories, meal, date)
+- Persisted in localStorage
+- Filter by date
+- 7-day bar chart
 
-## Development
+Notes
 
-This project is currently in the initial setup phase. More detailed setup and development instructions will be added as the project evolves.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues and enhancement requests.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+- This is intentionally minimal. If you want a backend, electron/desktop build, or tests, tell me and I'll scaffold it.
