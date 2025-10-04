@@ -85,7 +85,7 @@ jspm_packages/
 
 # Gatsby files
 .cache/
-public
+# public
 
 # Storybook build outputs
 .out
@@ -94,3 +94,5 @@ public
 # Temporary folders
 tmp/
 temp/
+# Local Netlify folder
+.netlify
